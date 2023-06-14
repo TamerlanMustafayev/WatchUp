@@ -1,3 +1,7 @@
-h1 {
-    color:red;
-}
+@import "variables";
+@import "globals";
+@import "mixins";
+@import "navbar";
+@import "hero";
+
+

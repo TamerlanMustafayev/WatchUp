@@ -1,0 +1,26 @@
+// Breakpoint
+
+//480px
+$viewport: (
+"mobile": "480px",
+"desktop": "481px"
+
+);
+
+@mixin smallScreen($size) {
+    @media  (max-width: map-get($viewport, $size)) {
+        @content;
+    }
+};
+
+$viewport: (
+"mobile": "480px"
+);
+
+@mixin bigScreen($size) {
+    @media  (min-width: map-get($viewport, $size)) {
+        @content;
+    }
+};
+
+

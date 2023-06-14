@@ -1,0 +1,83 @@
+// Desktop
+
+nav {
+    height: 45px;
+    background-color: $secondary;
+
+
+    i {
+        font-size: 30px;
+        color: red;
+        left: 30px;
+        top: 250px;
+        size: 30px;
+        position: absolute;
+    }
+}
+
+
+
+
+
+
+
+
+
+// Mobile
+
+// Hamburger Menu
+
+// On mobile first render
+@include smallScreen(mobile) {
+    .bars{
+        margin: 10px;
+        float: right;
+    }
+    .bars>span {
+        height: 5px;
+        width: 30px;
+        background-color: white;
+        border-radius: 2px;
+
+        &:not(:last-child){
+            margin-bottom: 5px;
+        }
+    }
+    ////////////////////
+    /// On Click
+    .open {
+        .bar1 {
+            transform: rotate(45deg);
+            transform-origin:8px 10px;
+        }
+        .bar2 {
+            opacity: 0;
+            transform: translate(10%);
+        }
+        .bar3 {
+            transform: rotate(-45deg);
+            transform-origin:4px -9px;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+// On Desktop

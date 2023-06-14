@@ -1,3 +1,108 @@
+html {
+  height: 100%;
+  font-size: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  all: unset;
+}
+
 h1 {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-jc-sa {
+  justify-content: space-around;
+}
+.flex-jc-se {
+  justify-content: space-evenly;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-ai-r {
+  align-items: end;
+}
+.flex-fd-c {
+  flex-direction: column;
+}
+.flex-fd-r {
+  flex-direction: row;
+}
+
+nav {
+  height: 45px;
+  background-color: #F2BE22;
+}
+nav i {
+  font-size: 30px;
   color: red;
+  left: 30px;
+  top: 250px;
+  size: 30px;
+  position: absolute;
+}
+
+@media (max-width: 480px) {
+  .bars {
+    margin: 10px;
+    float: right;
+  }
+  .bars > span {
+    height: 5px;
+    width: 30px;
+    background-color: white;
+    border-radius: 2px;
+  }
+  .bars > span:not(:last-child) {
+    margin-bottom: 5px;
+  }
+  .open .bar1 {
+    transform: rotate(45deg);
+    transform-origin: 8px 10px;
+  }
+  .open .bar2 {
+    opacity: 0;
+    transform: translate(10%);
+  }
+  .open .bar3 {
+    transform: rotate(-45deg);
+    transform-origin: 4px -9px;
+  }
+}
+.hero {
+  background-color: #22A699;
+  height: 100vh;
+  background-image: url(../Images/vintage-alarm-clock.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 300px auto;
 }/*# sourceMappingURL=styles.css.map */

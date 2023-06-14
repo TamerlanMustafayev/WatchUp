@@ -1,0 +1,74 @@
+// Basics
+
+html {
+    height: 100%;
+    font-size: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+     
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    all: unset;
+}
+
+
+h1{
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+
+
+//Flexbox
+
+.flex {
+    display:flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-jc-sa {
+        justify-content: space-around;
+    }
+    &-jc-se {
+        justify-content: space-evenly;
+    }
+    &-ai-c {
+        align-items: center;
+    }
+    &-ai-r {
+        align-items:end;
+    }
+
+    &-fd-c {
+        flex-direction: column;
+    }
+
+    &-fd-r {
+        flex-direction: row;
+    }
+
+    
+}
+
+
