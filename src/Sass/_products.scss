@@ -1,0 +1,125 @@
+
+    .products {
+    background-color: $secondary;
+    height: 100vh;
+    text-align: center;
+    background-image: url(../Images/Persistence_of_Memory.jpg);
+    background-repeat: no-repeat;
+    background-position: left 10% bottom 50%;
+    background-size: 600px auto;
+    background-blend-mode:luminosity;
+
+    .products-container {
+
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 20px;
+        
+    }
+    .each-product{
+        
+        img {
+            
+            border:0px groove $primary;
+            border-radius: 12px 12px 0 0;
+            width: 155px;
+        }
+
+        >span {
+            font-family: $primaryFont;
+            font-weight: bold;
+            color: white;
+            background-color: $primary;
+            border:10px solid $primary;
+            border-radius:0 0 8px 8px;
+            width: 155px;
+        }
+    }
+
+}
+
+
+
+// .amount {
+//     all: unset;
+//     text-align: center;
+
+//     width: 30px;
+// }
+
+
+@include bigScreen(desktop) {
+    .products {
+        background-color: $secondary;
+        height: 100vh;
+        text-align: center;
+        background-image: url(../Images/Persistence_of_Memory.jpg);
+        background-repeat: no-repeat;
+        background-position: left 10% bottom 50%;
+        background-size: 600px auto;
+        background-blend-mode:luminosity;
+        display: flex;
+        justify-content: right;
+    
+        .products-container {
+            width: 50%;
+            float: right;
+            display: grid;
+            grid-template-columns: repeat(3, 3fr);
+            gap: 20px;
+            
+        }
+        .each-product{
+            
+            img {
+                
+                border:0px groove $primary;
+                border-radius: 12px 12px 0 0;
+                width: 200px;
+            }
+    
+            >span {
+                font-family: $primaryFont;
+                font-weight: bold;
+                color: white;
+                background-color: $primary;
+                border:10px solid $primary;
+                border-radius:0 0 8px 8px;
+                width: 200px;
+            }
+    
+            // .quantity-selection{
+            //     margin-top: 5px;
+            //     color: white;
+            //     font-family: $primaryFont;
+            //     background-color: $primary;
+            //     border:10px solid $primary;
+            //     border-radius:8px 8px 0 0;
+            //     width: 135px;
+    
+            //     >span {
+            //         position: absolute;
+            //         margin-left: 40px;
+            //         // padding: 0 15px 0 15px;
+            //     }
+    
+            //     >button {
+            //         background-color: white;
+            //         color:$primary;
+            //         width: 30px;
+            //         height: 30px;
+            //     }
+            // }
+    
+            // .atc {
+            //     background-color: #fff;
+            //     color:$primary;
+            //     width: 135px;
+            //     border-top: 2px solid $secondary;
+            //     border-radius:0 0 8px 8px;
+            // }
+        }
+    
+    }
+}

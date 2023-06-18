@@ -1,17 +1,52 @@
+@include smallScreen(mobile) {
+    
+}
 .hero{
     background-color: $primary;
     height: 100vh;
     background-image: url(../Images/vintage-alarm-clock.png);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 300px auto;
+    background-position: right;
+    background-size: 800px auto;
+    background-blend-mode:soft-light;
+    text-align: center;
 
-    // .circle {
-    //     height: 100px;
-    //     width: 100px;
-    //     outline: red 1px;
-    //     border: red 51px;
-    //     position: absolute;
-    //     padding: 10px;
-    // }
+    >h1 {
+        margin-bottom: 60px;
+        font-size: 2rem;
+        text-shadow: 3px 5px 2px #474747;
+
+    }
+
+
+}
+
+// Mobile
+
+@include bigScreen(desktop) {
+    .hero{
+        background-color: $primary;
+        height: 100vh;
+        background-image: url(../Images/vintage-alarm-clock.png);
+        background-repeat: no-repeat;
+        background-position: right -95% bottom 30%;
+        background-size: 1300px auto;
+        text-align: center;
+        background-blend-mode:soft-light;
+        >h1 {
+           
+            font-size: 2rem;
+            text-shadow: 3px 5px 2px #474747;
+        }
+
+        
+    }
+    .cart-icon {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        height: 30px;
+        width: 30px;
+        background-color: red;
+    }
 }

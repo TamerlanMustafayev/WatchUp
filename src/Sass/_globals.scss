@@ -18,17 +18,33 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 button{
     all: unset;
-}
-
-
-h1{
+    cursor: pointer;
+    font-family: $primaryFont;
+    text-align: center;
     color:white;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    height: 45px;
+    width: 90px;
+    border-radius: 7px;
+    background-color: $secondary;
+    transition: all 100ms ease-in;
+
+    &:hover {
+        background-color: $primary;
+    }
 }
+
+
+h1,h2{
+    
+    color:white;
+    font-family:$primaryFont;
+}
+
 a, a:visited, a:hover {
     text-decoration: none;
 }
