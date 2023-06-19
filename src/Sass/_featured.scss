@@ -1,0 +1,31 @@
+.featured {
+    height: fit-content;
+    padding: 40px 0;
+    background-color: #F29727;
+    background-image: url(../Images/featuredBG.png);
+    background-repeat: repeat;
+    background-size: 100px;
+    background-position: center;
+    background-blend-mode:difference;
+    
+
+    >img {
+        width: 60%;
+    }
+
+    .featured-info {
+        font-family: $primaryFont;
+        color: white;
+        gap: 20px;
+        font-weight: bold;
+
+        .atc {
+            background-color: #F24C3D;
+            font-family: $primaryFont;
+            padding: 10px 20px;
+        }
+    }
+
+
+    
+}

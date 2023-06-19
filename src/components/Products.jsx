@@ -3,6 +3,10 @@ import Clock1 from "../Images/Clock1.webp";
 import Clock2 from "../Images/Clock2.webp";
 import Clock3 from "../Images/Clock3.webp";
 import Clock4 from "../Images/Clock4.webp";
+import Clock5 from "../Images/Clock5.webp";
+import Clock6 from "../Images/Clock6.webp";
+import Clock7 from "../Images/Clock7.webp";
+import Clock8 from "../Images/Clock8.webp";
 // import Button from "./Button";
 
     
@@ -31,22 +35,22 @@ function Products() {
         },
         {
             id:5,
-            image: Clock4,
+            image: Clock5,
             price: 29.99,
         },
         {
             id:6,
-            image: Clock4,
+            image: Clock6,
             price: 29.99,
         },
         {
             id:7,
-            image: Clock4,
+            image: Clock7,
             price: 29.99,
         },
         {
             id:8,
-            image: Clock4,
+            image: Clock8,
             price: 29.99,
         }
     ]
@@ -57,12 +61,11 @@ function Products() {
         <>
             
             <div className="products">
-                <h2>Shop</h2>
                 <div className="products-container">{
                     
                     productsArray.map((item) =>
                         <>
-                            <div className="each-product flex flex-fd-c flex-jc-c flex-ai-c">
+                            <div className="each-product flex flex-fd-c ">
                                 <img src={item.image} alt="" />
                                 <span>${item.price}</span>
                                 {/* <Button /> */}

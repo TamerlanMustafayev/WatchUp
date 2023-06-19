@@ -1,0 +1,50 @@
+.testimonials {
+    padding: 20px 10px;
+    background-color: $primary;
+    height: fit-content;
+    background-image: url(../Images/dali.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 800px auto;
+    background-blend-mode:soft-light;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+
+    .testimonials-container {
+        height: inherit;
+        margin-top: 40px;
+        gap: 80px;
+        .reviews {
+            gap: 15px;
+        >img {
+            width: 150px;
+            border:5px solid white;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.088);
+        }
+        .rating {
+            color:$secondary;
+            
+            i{
+                margin: 1px;
+                text-shadow: 1px 1px 1px black;
+            }
+        }
+        >p {
+                font-style: italic;
+                padding: 20px;
+                font-weight: 400;
+                background-color: white;
+                font-family: $primaryFont;
+                color: $primary;
+                width: 80%;
+
+                border-radius: 15px;
+                box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.119);
+            }
+    }
+    }
+    
+    
+}

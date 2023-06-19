@@ -259,4 +259,29 @@ nav i {
   color: white;
   background-color: #F2BE22;
   border-radius: 7px;
+}
+
+.testimonials {
+  background-color: #F2BE22;
+  height: 100vh;
+  background-image: url(../Images/dali.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 800px auto;
+  background-blend-mode: soft-light;
+  text-align: center;
+  align-items: center;
+}
+.testimonials .testimonials-container {
+  height: inherit;
+}
+.testimonials .testimonials-container .reviews {
+  background-color: white;
+  width: 80%;
+  border-radius: 15px;
+}
+.testimonials .testimonials-container .reviews > img {
+  width: 150px;
+  border: 5px solid white;
+  border-radius: 50%;
 }/*# sourceMappingURL=styles.css.map */
