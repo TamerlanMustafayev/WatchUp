@@ -1,12 +1,40 @@
 import React from 'react';
 
+window.onload=function(){
+
+  const bars = document.querySelector(".bars");
+  const mobileMenu = document.querySelector(".mobile__menu")
+  bars.addEventListener("click", function () {
+  
+    if (bars.classList.contains("open")) {
+      bars.classList.remove("open")
+      mobileMenu.classList.remove("is-active")
+    }
+    
+    else {
+      bars.classList.add("open")
+      mobileMenu.classList.add("is-active")
+
+    }
+    
+  })
+
+
+
+}
+
+
+
 function Header() {
 
 
 
 
-
-    return (<>
+  return (
+    
+    
+    <>
+      
         
         {/*  Navbar  */}
      <nav className="nav">
@@ -31,14 +59,14 @@ function Header() {
      
       {/* Mobile Menu  */}
     </nav>
-    {/* <div className="mobile__menu hide-for-desktop ">
-      <div classNameName="mobile__menu__links flex flex-fd-c flex-jc-c flex-ai-c">
-        <a href="/">Portfolio</a>
-        <a href="/">GraphicDesign</a>
-        <a href="/">About Me</a>
-        <a href="/">Contact</a>  
-      </div>
-    </div> */}
+    <div className="mobile__menu  flex flex-fd-c flex-jc-c flex-ai-c">
+      
+        <a href="/">SHOP</a>
+        <a href="/">FEATURED</a>
+        <a href="/">ABOUT US</a>
+        <a href="/">CONTACT</a>  
+      
+    </div>
     </>
     )
 }

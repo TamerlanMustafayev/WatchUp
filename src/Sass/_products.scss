@@ -22,6 +22,9 @@
         
     }
     .each-product{
+        color: white;
+        font-family: $primaryFont;
+        font-weight: bolder ;
         gap: 10px;
         justify-content: end;
         align-items: center;
@@ -29,17 +32,18 @@
             border-radius: 12px 12px 0 0;
             width: 155px;
             filter: drop-shadow(0px 0px 70px #ffffff);
-            -webkit-filter: drop-shadow(0px 0px 80px #0200009e);
+            -webkit-filter: drop-shadow(0px 0px 80px #ffffff9e);
         }
 
         >span {
+            padding: 10px 0;
             font-family: $primaryFont;
             font-weight: bold;
             color: white;
-            background-color: $primary;
-            border:10px solid $primary;
-            border-radius:8px;
-            width: 155px;
+            border:2px solid white;
+
+
+            width: 115px;
         }
     }
 

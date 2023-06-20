@@ -12,6 +12,7 @@ function AboutUs() {
                     <h2>Newsletter</h2>
                     <input className="subscription" type="text" placeholder="Your email"  />
                     <button className="sub-btn">Subscribe</button>
+                    
                 </div>
 
             </div>

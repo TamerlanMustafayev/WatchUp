@@ -14,44 +14,52 @@ function Products() {
     
     const productsArray = [
         {
-            id:1,
+            id: 1,
+            name: "Karona 1977",
             image: Clock1,
-            price: 19.99,
+            price: 199.99,
         },
         {
-            id:2,
+            id: 2,
+            name: "Shertz",
             image: Clock2,
-            price: 21.99,
+            price: 217.99,
         },
         {
-            id:3,
+            id: 3,
+            name: "Seitia",
             image: Clock3,
-            price: 24.99,
+            price: 224.99,
         },
         {
-            id:4,
+            id: 4,
+            name: "Matrana",
             image: Clock4,
-            price: 29.99,
+            price: 329.99,
         },
         {
-            id:5,
+            id: 5,
+            name: "Blnosk",
             image: Clock5,
-            price: 29.99,
+            price: 629.99,
         },
         {
             id:6,
+            name: "Nautsky65",
             image: Clock6,
-            price: 29.99,
+            price: 729.99,
         },
         {
-            id:7,
+            id: 7,
+            name: "Stroyev",
             image: Clock7,
-            price: 29.99,
+            price: 269.99,
         },
         {
-            id:8,
+            id: 8,
+            name: "Kendoks T2",
             image: Clock8,
-            price: 29.99,
+            price: 298.99,
         }
     ]
 
@@ -67,6 +75,7 @@ function Products() {
                         <>
                             <div className="each-product flex flex-fd-c ">
                                 <img src={item.image} alt="" />
+                                <p>{item.name}</p>
                                 <span>${item.price}</span>
                                 {/* <Button /> */}
                                 
