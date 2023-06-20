@@ -17,16 +17,21 @@
         text-align: center;
         background-color:  #ffffff33 
     }
-    >p {
+    .aboutUs-container {
+        background-color: #ffffff33;
+        padding: 10px;
+    }
+    p {
         padding: 10px 20px;
+        background-color: rgba(11, 10, 10, 0.516);
 
         color: #FFFFFF;
-        background-color:  #ffffff33 ;
+;
     }
 
     .newsletter {
         text-align: center;
-        background-color:  #ffffff33;
+    ;
         padding: 20px 0;
 
         input {
@@ -47,10 +52,41 @@
             width: fit-content;
             height: 40px;
             color: white;
-            background-color: $secondary;
+            background-color: $lessCommon;
             border-radius: 7px;
         }
 
     }
 }
 
+@include bigScreen(desktop) {
+    .about-us {
+        height: 100vh;
+        
+    }
+
+    .aboutUs-container {
+        height: 100%;
+        background-color:  #ffffff33;
+        flex-direction: row ;
+        justify-content: space-around;
+        align-items: center;
+
+        >p{
+            padding: 30px;
+            width: 50%;
+        }
+        .newsletter {
+            .sub-btn {
+            cursor: pointer;
+            background-color: $lessCommon;
+            transition: all 150ms ease-in-out;
+            &:hover {
+                transform: scale(0.9);
+            }
+        }
+        }
+        
+    }
+
+}

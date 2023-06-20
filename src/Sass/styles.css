@@ -95,6 +95,9 @@ nav {
 }
 
 @media (max-width: 481px) {
+  .desktop__links {
+    display: none;
+  }
   .bars {
     margin: 10px;
     float: right;
@@ -151,6 +154,20 @@ nav {
     color: white;
   }
 }
+@media (min-width: 481px) {
+  .desktop__links {
+    height: inherit;
+    justify-content: end;
+    align-items: center;
+    margin-right: 20px;
+    gap: 20px;
+  }
+  .desktop__links > a, .desktop__links a:active, .desktop__links a:focus, .desktop__links a:hover {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+  }
+}
 .hero {
   background-color: #22A699;
   height: 100vh;
@@ -158,7 +175,7 @@ nav {
   background-repeat: no-repeat;
   background-position: right;
   background-size: 800px auto;
-  background-blend-mode: soft-light;
+  background-blend-mode: darken;
   text-align: center;
   padding: 0 10px;
 }
@@ -185,14 +202,25 @@ nav {
     height: 100vh;
     background-image: url(../Images/vintage-alarm-clock.png);
     background-repeat: no-repeat;
-    background-position: right -95% bottom 30%;
-    background-size: 1300px auto;
+    background-position: center top;
+    background-size: 1500px auto;
     text-align: center;
-    background-blend-mode: soft-light;
+    background-blend-mode: darken;
   }
   .hero > h1 {
     font-size: 2rem;
-    text-shadow: 3px 5px 2px #474747;
+  }
+  .hero .shop {
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.098);
+  }
+  .hero .shop:hover {
+    color: #F29727;
+    transform: scale(0.9);
+    background-color: white;
+  }
+  .hero .shop:hover a {
+    color: #F29727;
   }
   .cart-icon {
     position: fixed;
@@ -207,7 +235,7 @@ nav {
   background-color: #F2BE22;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 40px 10px;
+  padding: 20px 0px;
   text-align: center;
   background-image: url(../Images/Persistence_of_Memory.jpg);
   background-repeat: no-repeat;
@@ -235,8 +263,7 @@ nav {
 .products .each-product img {
   border-radius: 12px 12px 0 0;
   width: 155px;
-  filter: drop-shadow(0px 0px 70px #ffffff);
-  -webkit-filter: drop-shadow(0px 0px 80px rgba(255, 255, 255, 0.6196078431));
+  filter: drop-shadow(10px 0px 0 white) drop-shadow(0px 0px 0 white);
 }
 .products .each-product > span {
   padding: 10px 0;
@@ -244,19 +271,23 @@ nav {
   font-weight: bold;
   color: white;
   border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.134);
   width: 115px;
 }
 
 @media (min-width: 481px) {
   .products {
     background-color: #F2BE22;
-    height: 100vh;
+    padding: 20px 0;
+    height: -moz-fit-content;
+    height: fit-content;
     text-align: center;
     background-image: url(../Images/Persistence_of_Memory.jpg);
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: left 10% bottom 50%;
     background-size: 600px auto;
-    background-blend-mode: luminosity;
+    background-blend-mode: multiply;
     display: flex;
     justify-content: right;
   }
@@ -266,20 +297,14 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 3fr);
     gap: 20px;
+    padding: 0 20px;
   }
   .products .each-product img {
     border: 0px groove #22A699;
     border-radius: 12px 12px 0 0;
     width: 200px;
-  }
-  .products .each-product > span {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    color: white;
-    background-color: #22A699;
-    border: 10px solid #22A699;
-    border-radius: 0 0 8px 8px;
-    width: 200px;
+    background-color: transparent;
+    filter: drop-shadow(10px 0px 0 white) drop-shadow(0px 0px 0 white);
   }
 }
 .about-us {
@@ -303,14 +328,17 @@ nav {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.2);
 }
-.about-us > p {
-  padding: 10px 20px;
-  color: #FFFFFF;
+.about-us .aboutUs-container {
   background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+}
+.about-us p {
+  padding: 10px 20px;
+  background-color: rgba(11, 10, 10, 0.516);
+  color: #FFFFFF;
 }
 .about-us .newsletter {
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.2);
   padding: 20px 0;
 }
 .about-us .newsletter input {
@@ -330,10 +358,34 @@ nav {
   width: fit-content;
   height: 40px;
   color: white;
-  background-color: #F2BE22;
+  background-color: #F24C3D;
   border-radius: 7px;
 }
 
+@media (min-width: 481px) {
+  .about-us {
+    height: 100vh;
+  }
+  .aboutUs-container {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .aboutUs-container > p {
+    padding: 30px;
+    width: 50%;
+  }
+  .aboutUs-container .newsletter .sub-btn {
+    cursor: pointer;
+    background-color: #F24C3D;
+    transition: all 150ms ease-in-out;
+  }
+  .aboutUs-container .newsletter .sub-btn:hover {
+    transform: scale(0.9);
+  }
+}
 .testimonials {
   padding: 20px 10px;
   background-color: #22A699;
@@ -363,7 +415,7 @@ nav {
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.088);
 }
 .testimonials .testimonials-container .reviews .rating {
-  color: #F2BE22;
+  color: white;
 }
 .testimonials .testimonials-container .reviews .rating i {
   margin: 1px;
@@ -381,16 +433,31 @@ nav {
   box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.119);
 }
 
+@media (min-width: 481px) {
+  .testimonials {
+    background-position: left;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .testimonials-container {
+    margin-top: 0 !important;
+    padding-top: 0;
+    align-items: center;
+    flex-direction: row;
+  }
+}
 .featured {
   height: -moz-fit-content;
   height: fit-content;
   padding: 40px 0;
   background-color: #F29727;
   background-image: url(../Images/featuredBG.png);
+  background-attachment: fixed;
   background-repeat: repeat;
   background-size: 100px;
   background-position: center;
-  background-blend-mode: difference;
+  background-blend-mode: darken;
 }
 .featured > img {
   width: 60%;
@@ -400,17 +467,27 @@ nav {
   color: white;
   gap: 20px;
   font-weight: bold;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.729);
 }
-.featured .featured-info .atc {
+.featured .featured-info .featured-watch {
   background-color: #F24C3D;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 10px 20px;
 }
+.featured .featured-info .featured-watch:hover {
+  transform: scale(0.9);
+}
 
+@media (max-width: 481px) {
+  .featured-info .featured-watch {
+    font-size: 0.8rem;
+    padding: 5px !important;
+  }
+}
 .contact {
   height: -moz-fit-content;
   height: fit-content;
-  padding: 20px 0px;
+  padding: 20px 0 0 0px;
   background-color: #22A699;
   text-align: center;
   color: white;
@@ -439,10 +516,41 @@ nav {
   border-radius: 4px;
   padding: 5px 8px;
 }
+.contact form .submit {
+  background-color: #F24C3D;
+  transition: all 150ms ease-in-out;
+}
+.contact form .submit:hover {
+  transform: scale(0.9);
+}
 .contact .google-map iframe {
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   width: 100%;
   height: 450;
   border: 0;
+}
+
+#copyright {
+  color: white;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #22A699;
+}
+
+@media (min-width: 481px) {
+  .contact {
+    background-size: 1800px;
+    background-position: left center;
+  }
+  .contact .contact-container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact .contact-container .google-map {
+    width: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -68,7 +68,7 @@ function Products() {
     return (
         <>
             
-            <div className="products">
+            <div className="products" id="shop">
                 <div className="products-container">{
                     
                     productsArray.map((item) =>

@@ -39,14 +39,13 @@ function Header() {
         {/*  Navbar  */}
      <nav className="nav">
        
-        {/* <div className="desktop__links">
-          <div className="nav__items  flex flex-jc-sa">
-            <a className="nav__link" href="#">Portfolio</a>
-            <a className="nav__link" href="#">GraphicDesign</a>
-            <a className="nav__link" href="#">About Me</a>
-            <a className="nav__link" href="#">Contact</a>  
-          </div>
-        </div> */}
+        <div className="desktop__links flex flex-jc-c hide-for-mobile">
+        
+            <a className="nav__link" href="#shop">Shop</a>
+            <a className="nav__link" href="#featured">Featured</a>
+            <a className="nav__link" href="#about-us">About Us</a>
+            <a className="nav__link" href="#contact">Contact</a>  
+        </div>
 
         {/* Mobile Navbar */}
       
@@ -61,10 +60,10 @@ function Header() {
     </nav>
     <div className="mobile__menu  flex flex-fd-c flex-jc-c flex-ai-c">
       
-        <a href="/">SHOP</a>
-        <a href="/">FEATURED</a>
-        <a href="/">ABOUT US</a>
-        <a href="/">CONTACT</a>  
+        <a href="#shop">SHOP</a>
+        <a href="#featured">FEATURED</a>
+        <a href="#about-us">ABOUT US</a>
+        <a href="#contact">CONTACT</a>  
       
     </div>
     </>

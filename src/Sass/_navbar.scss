@@ -35,6 +35,10 @@ nav {
 
 // On mobile first render
 @include smallScreen(desktop) {
+
+    .desktop__links {
+        display: none;
+    }
     .bars{
         margin: 10px;
         float: right;
@@ -117,3 +121,19 @@ nav {
 }
 
 // On Desktop
+
+@include bigScreen(desktop) {
+    .desktop__links {
+        height: inherit;
+        justify-content: end;
+        align-items: center;
+        margin-right: 20px;
+        gap: 20px;
+        
+        >a, a:active, a:focus, a:hover {
+            color: white;
+            font-family: $primaryFont;
+            font-weight: bold;
+        }
+    }
+}

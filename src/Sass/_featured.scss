@@ -1,12 +1,14 @@
 .featured {
     height: fit-content;
     padding: 40px 0;
-    background-color: #F29727;
+    background-color: $common;
     background-image: url(../Images/featuredBG.png);
+    background-attachment: fixed;
     background-repeat: repeat;
     background-size: 100px;
     background-position: center;
-    background-blend-mode:difference;
+ 
+    background-blend-mode:darken;
     
 
     >img {
@@ -18,14 +20,31 @@
         color: white;
         gap: 20px;
         font-weight: bold;
+        text-shadow: 0 0 3px rgba(255, 255, 255, 0.729);
 
-        .atc {
-            background-color: #F24C3D;
+        .featured-watch {
+            background-color: $lessCommon;
             font-family: $primaryFont;
             padding: 10px 20px;
+
+            &:hover {
+                transform: scale(0.9);
+
+            }
         }
     }
 
 
     
+}
+
+// Mobile
+
+@include smallScreen(desktop) {
+    .featured-info {
+        .featured-watch {
+            font-size: 0.8rem;
+            padding: 5px !important;
+        }
+    }
 }

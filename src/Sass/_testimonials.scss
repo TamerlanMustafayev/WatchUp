@@ -24,7 +24,7 @@
             box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.088);
         }
         .rating {
-            color:$secondary;
+            color:white;
             
             i{
                 margin: 1px;
@@ -47,4 +47,20 @@
     }
     
     
+}
+
+// Desktop 
+@include bigScreen(desktop) {
+    .testimonials {
+        background-position: left;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .testimonials-container {
+        margin-top: 0 !important;
+        padding-top: 0;
+        align-items: center;
+        flex-direction: row;
+    }
 }
