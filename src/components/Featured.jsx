@@ -1,5 +1,15 @@
 import React from "react";
+// import { NavLink } from "react-router-dom";
 import featured from "../Images/featured.png"
+// import {
+//     createBrowserRouter,
+//     Route,
+//     Link,
+//     createRoutesFromElements,
+//     RouterProvider
+//   } from 'react-router-dom';
+
+
 function Featured() {
     return (
         <>
@@ -13,6 +23,7 @@ function Featured() {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt debitis voluptates recusandae explicabo. Obcaecati alias enim natus debitis?</p>
                     <button className="featured-watch">View Product</button>
                 </div>
+
 
 
 
