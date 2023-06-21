@@ -485,6 +485,14 @@ nav {
   background-color: #F24C3D;
   font-family: "Source Code Pro", monospace;
   padding: 10px 20px;
+  cursor: pointer;
+  font-family: "Source Code Pro", monospace;
+  text-align: center;
+  color: white;
+  height: 45px;
+  border-radius: 7px;
+  background-color: #F2BE22;
+  transition: all 100ms ease-in;
 }
 .featured .featured-info .featured-watch:hover {
   transform: scale(0.9);
@@ -492,8 +500,11 @@ nav {
 
 @media (max-width: 481px) {
   .featured-info .featured-watch {
-    font-size: 0.8rem;
-    padding: 5px !important;
+    height: 30px;
+    text-align: center;
+    font-size: 1rem;
+    width: 90%;
+    padding: 10px;
   }
 }
 .contact {

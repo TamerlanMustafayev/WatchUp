@@ -26,6 +26,15 @@
             background-color: $lessCommon;
             font-family: $primaryFont;
             padding: 10px 20px;
+            cursor: pointer;
+            font-family: $primaryFont;
+            text-align: center;
+            color: white;
+            height: 45px;
+            
+            border-radius: 7px;
+            background-color: #F2BE22;
+            transition: all 100ms ease-in;
 
             &:hover {
                 transform: scale(0.9);
@@ -43,8 +52,11 @@
 @include smallScreen(desktop) {
     .featured-info {
         .featured-watch {
-            font-size: 0.8rem;
-            padding: 5px !important;
+            height: 30px;
+            text-align: center;
+            font-size: 1rem;
+            width: 90%;
+            padding: 10px ;
         }
     }
 }
