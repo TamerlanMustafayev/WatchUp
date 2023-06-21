@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap");
 html {
   height: 100%;
   font-size: 100%;
@@ -21,7 +22,7 @@ body {
 button {
   all: unset;
   cursor: pointer;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Source Code Pro", monospace;
   text-align: center;
   color: white;
   height: 45px;
@@ -36,7 +37,15 @@ button:hover {
 
 h1, h2 {
   color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Source Code Pro", monospace;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-family: "Source Code Pro", monospace;
 }
 
 a, a:visited, a:hover {
@@ -148,7 +157,7 @@ nav {
     visibility: visible;
     text-decoration: underline;
     text-shadow: 0 0 3px rgba(255, 255, 255, 0.729);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Source Code Pro", monospace;
     font-weight: bold;
     font-size: 2rem;
     color: white;
@@ -164,7 +173,7 @@ nav {
   }
   .desktop__links > a, .desktop__links a:active, .desktop__links a:focus, .desktop__links a:hover {
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Source Code Pro", monospace;
     font-weight: bold;
   }
 }
@@ -254,7 +263,7 @@ nav {
 }
 .products .each-product {
   color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Source Code Pro", monospace;
   font-weight: bolder;
   gap: 10px;
   justify-content: end;
@@ -267,8 +276,8 @@ nav {
 }
 .products .each-product > span {
   padding: 10px 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
+  font-family: "Source Code Pro", monospace;
+  font-weight: bolder;
   color: white;
   border: 2px solid white;
   background-color: rgba(0, 0, 0, 0.134);
@@ -292,19 +301,30 @@ nav {
     justify-content: right;
   }
   .products .products-container {
-    width: 50%;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 60%;
     float: right;
     display: grid;
-    grid-template-columns: repeat(3, 3fr);
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
     gap: 20px;
     padding: 0 20px;
   }
   .products .each-product img {
     border: 0px groove #22A699;
     border-radius: 12px 12px 0 0;
-    width: 200px;
+    width: 66%;
     background-color: transparent;
     filter: drop-shadow(10px 0px 0 white) drop-shadow(0px 0px 0 white);
+  }
+  .products .each-product > span {
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+  }
+  .products .each-product > span:hover {
+    background-color: white;
+    color: #F2BE22;
   }
 }
 .about-us {
@@ -351,7 +371,7 @@ nav {
 .about-us .newsletter .sub-btn {
   all: unset;
   font-size: 0.875rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Source Code Pro", monospace;
   margin-top: 8px;
   padding: 0 18px;
   width: -moz-fit-content;
@@ -426,7 +446,7 @@ nav {
   padding: 20px;
   font-weight: 400;
   background-color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Source Code Pro", monospace;
   color: #22A699;
   width: 80%;
   border-radius: 15px;
@@ -450,7 +470,7 @@ nav {
 .featured {
   height: -moz-fit-content;
   height: fit-content;
-  padding: 40px 0;
+  padding: 40px 30px;
   background-color: #F29727;
   background-image: url(../Images/featuredBG.png);
   background-attachment: fixed;
@@ -463,7 +483,7 @@ nav {
   width: 60%;
 }
 .featured .featured-info {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Source Code Pro", monospace;
   color: white;
   gap: 20px;
   font-weight: bold;
@@ -471,7 +491,7 @@ nav {
 }
 .featured .featured-info .featured-watch {
   background-color: #F24C3D;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Source Code Pro", monospace;
   padding: 10px 20px;
 }
 .featured .featured-info .featured-watch:hover {
@@ -491,7 +511,7 @@ nav {
   background-color: #22A699;
   text-align: center;
   color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Source Code Pro", monospace;
   background-image: url(../Images/contactBG.webp);
   background-blend-mode: soft-light;
   background-repeat: no-repeat;
@@ -534,7 +554,7 @@ nav {
 #copyright {
   color: white;
   text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Source Code Pro", monospace;
   background-color: #22A699;
 }
 
