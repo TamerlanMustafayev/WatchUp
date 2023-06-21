@@ -1,0 +1,35 @@
+.quantity-selection {
+    margin: 20px 0;
+    input {
+        width: 50px;
+        border: 2px solid $primary;
+        border-radius: 5px;
+        text-align: center;
+        color: $primary;
+        font-size: bolder;
+        margin: 0 10px;
+    }
+
+    button{
+        &:hover {
+            background-color: $secondary;
+        }
+    }
+}
+
+.atc {
+    margin: auto;
+    width: inherit;
+
+    &:hover {
+        background-color: $secondary;
+    }
+}
+
+// @include bigScreen(desktop) { 
+
+//     .quantity-selection {
+//         width: 50%;
+//     }
+
+// }

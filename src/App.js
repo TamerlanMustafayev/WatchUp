@@ -1,14 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Header from "./components/Header"
-import Hero from "./components/Hero"
-import Products from "./components/Products"
-import AboutUs from './components/AboutUs';
-import Testimonials from './components/Testimonials';
-import Featured from './components/Featured';
-import Contact from './components/Contact';
 
 
+import Home from './components/Home';
+import Maximilian from './components/Maximilian';
 
 function App() {
   return (
@@ -16,21 +12,10 @@ function App() {
     <BrowserRouter>
       <Header/>
       <Routes>
-        <Route index path='/' element={<Hero/>} />
-        <Route />
-        <Route />
+        <Route index path='/' element={<Home />} />
+        <Route path='/maximilian' element={<Maximilian/>} />
       </Routes>
     </BrowserRouter>
-
-    // <div className="App">
-    //     <Header />
-    //     <Hero />
-    //     <Featured />
-    //     <Products />
-    //     <Testimonials />
-    //     <AboutUs />
-    //     <Contact />
-    //   </div>
     
   );
 }

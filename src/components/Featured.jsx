@@ -1,13 +1,8 @@
 import React from "react";
-// import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import featured from "../Images/featured.png"
-// import {
-//     createBrowserRouter,
-//     Route,
-//     Link,
-//     createRoutesFromElements,
-//     RouterProvider
-//   } from 'react-router-dom';
+import Maximilian from "./Maximilian";
+
 
 
 function Featured() {
@@ -21,7 +16,7 @@ function Featured() {
                 <div className="featured-info flex flex-fd-c flex-jc-sb ">
                     <h2>Maximilian Pocket Watch</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt debitis voluptates recusandae explicabo. Obcaecati alias enim natus debitis?</p>
-                    <button className="featured-watch">View Product</button>
+                    <Link to="/maximilian" className="featured-watch">View Product</Link>
                 </div>
 
 
