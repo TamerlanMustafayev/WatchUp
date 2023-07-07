@@ -1,12 +1,11 @@
 <!-- WatchUp README.md -->
 
-# <img src="https://github.com/TamerlanMustafayev/WatchUp/blob/main/src/assets/images/watchup-logo.png" alt="WatchUp" width="200">
+<h1>WatchUp</h1>
 
 ## Description
 
 WatchUp is a web application built in React that offers a wide range of vintage clocks for purchase. The project leverages the power of React, JSX, React Router, useState, useEffect, and SCSS to create an immersive and user-friendly shopping experience.
 
-![WatchUp](https://github.com/TamerlanMustafayev/WatchUp/blob/main/src/assets/images/watchup-preview.png)
 
 ## Features
 
