@@ -1,14 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 // Colors
 
 $primary:#22A699;
-$secondary: #F2BE22;
-$common:#F29727;
-$lessCommon: #F24C3D;
+$secondary: #FFDAB9;
+$third: #faffb9;
+$common: #C1A374;
+$lessCommon: #BCCEB4;
 
 
 // Fonts
 
-$primaryFont:  'Source Code Pro', monospace;
+$primaryFont: 'Abril Fatface', cursive;
+$secondaryFont:  'Source Code Pro', monospace;
+$textFont: 'Raleway', sans-serif;
+
+
+// Font sizes
+
+$XS: 0.675rem;
+$S: 0.875rem;
+$M: 1rem;
+$L: 1.225rem;
+$XL: 1.8rem;
+$XXL: 2.5rem;

@@ -12,7 +12,7 @@ function AboutUs() {
                 <div className="newsletter flex flex-fd-c flex-jc-c flex-ai-c">
                     <h2>Newsletter</h2>
                     <input className="subscription" type="text" placeholder="Your email"  />
-                    <button className="sub-btn">Subscribe</button>
+                    <button className="button">Subscribe</button>
                     
                 </div>
                 </div>

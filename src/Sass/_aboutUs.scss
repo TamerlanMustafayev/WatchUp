@@ -4,7 +4,7 @@
     background-size: 700px;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
-    background-color: #F29727;
+    background-color: $primary;
     height: fit-content;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
@@ -12,10 +12,10 @@
     font-size: 1.2rem;
     text-align:start;
     line-height: 1.5;
-    >h2{
+    h2{
         padding: 10px 10px;
         text-align: center;
-        background-color:  #ffffff33 
+        color: white;
     }
     .aboutUs-container {
         background-color: #ffffff33;
@@ -43,6 +43,8 @@
             border: 0;
             padding: 5px;
             border-radius: 7px;
+            margin-bottom: 10px;
+
         }
 
         .sub-btn {

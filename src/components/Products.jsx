@@ -69,14 +69,16 @@ function Products() {
         <>
             
             <div className="products" id="shop">
-                <div className="products-container">{
-                    
+                <h2>Products</h2>
+                <div className="products-container">
+                    {
                     productsArray.map((item) =>
-                        <>
+                        <>  
+                            
                             <div className="each-product flex flex-fd-c ">
                                 <img src={item.image} alt="" />
                                 <p>{item.name}</p>
-                                <span>${item.price}</span>
+                                <button className="button2">${item.price}</button>
                                 {/* <Button /> */}
                                 
                                 

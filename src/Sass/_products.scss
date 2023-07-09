@@ -1,15 +1,9 @@
 
     .products {
-    background-color: $secondary;
+    background-color: $third;
     height: fit-content;
     padding: 20px 0px;
     text-align: center;
-    background-image: url(../Images/Persistence_of_Memory.jpg);
-    background-repeat: no-repeat;
-    background-position: left 10% bottom 50%;
-    background-size: 600px auto;
-    background-blend-mode:luminosity;
-
     >h2 {
         padding:0 0 20px 0;
     }
@@ -18,12 +12,10 @@
         display: grid;
         grid-template-columns: repeat(2, 2fr);
         gap: 20px;
-        
-        
     }
     .each-product{
-        color: white;
-        font-family: $primaryFont;
+        color: $common;
+        font-family: $textFont ;
         font-weight: bolder ;
         gap: 10px;
         justify-content: end;
@@ -33,20 +25,13 @@
             width: 155px;
             -webkit-filter: drop-shadow(1px 1px 0 white)
             drop-shadow(-10px 0px 0 white);
-            filter: drop-shadow(10px 0px 0 white) 
+            filter: drop-shadow(10px 0px 50px  $common) 
                     drop-shadow(0px 0px 0 white);
         }
         
-
-        >span {
-            padding: 10px 0;
+        p {
             font-family: $primaryFont;
-            font-weight: bolder;
-            color: white;
-            border:2px solid white;
-            background-color: rgba(0, 0, 0, 0.134);
-
-            width: 115px;
+            font-weight: lighter;
         }
     }
 
@@ -54,102 +39,26 @@
 
 
 
-// .amount {
-//     all: unset;
-//     text-align: center;
-
-//     width: 30px;
-// }
-
-
 @include bigScreen(desktop) {
     .products {
-        background-color: $secondary;
-       padding: 20px 0;
-        height: fit-content;
+        padding: 20px;
+        height: 120%;
         text-align: center;
-        // background-image: url(../Images/productsbg.png);
-
-        background-image: url(../Images/Persistence_of_Memory.jpg);
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-position: left 10% bottom 50%;
-        background-size: 600px auto;
-        background-blend-mode:multiply;
-        display: flex;
+        // display: flex;
         justify-content: right;
 
-    
+
         .products-container {
-            // background-size: 50px;
-            // background-blend-mode: darken;
-            // background-color: transparent   ;
             height: fit-content;
-            width: 60%;
+            width: 100%;
             float: right;
             display: grid;
             grid-template-columns: auto auto auto;
             grid-template-rows: auto auto auto auto;;
             gap: 20px;
             padding: 0 20px;
-            // box-shadow: -169px 1px 242px 59px rgba(0,0,0,0.47);
-            // -webkit-box-shadow: -169px 1px 242px 59px rgba(0,0,0,0.47);
-            // -moz-box-shadow: -169px 1px 242px 59px rgba(0,0,0,0.47);            
         }
-        .each-product{
-            
-            img {
-                
-                border:0px groove $primary;
-                border-radius: 12px 12px 0 0;
-                width: 66%;
-                background-color: transparent;
-                -webkit-filter: drop-shadow(1px 1px 0 white)
-                drop-shadow(-10px 0px 0 white);
-                filter: drop-shadow(10px 0px 0 white) 
-                        drop-shadow(0px 0px 0 white);
-            } 
-    
-            >span {
-                cursor: pointer;
-                transition: all 150ms ease-in-out;
-                &:hover {
-                    background-color: white;
-                    color:$secondary;
-                }
-            }
-    
-            // .quantity-selection{
-            //     margin-top: 5px;
-            //     color: white;
-            //     font-family: $primaryFont;
-            //     background-color: $primary;
-            //     border:10px solid $primary;
-            //     border-radius:8px 8px 0 0;
-            //     width: 135px;
-    
-            //     >span {
-            //         position: absolute;
-            //         margin-left: 40px;
-            //         // padding: 0 15px 0 15px;
-            //     }
-    
-            //     >button {
-            //         background-color: white;
-            //         color:$primary;
-            //         width: 30px;
-            //         height: 30px;
-            //     }
-            // }
-    
-            // .atc {
-            //     background-color: #fff;
-            //     color:$primary;
-            //     width: 135px;
-            //     border-top: 2px solid $secondary;
-            //     border-radius:0 0 8px 8px;
-            // }
-        }
+
     
     }
 }

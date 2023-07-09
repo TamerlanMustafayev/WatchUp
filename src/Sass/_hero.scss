@@ -1,33 +1,41 @@
 
 .hero{
-    background-color: $primary;
-    height: 100vh;
+    background-color: $third;
+    height: 100%;
     background-image: url(../Images/vintage-alarm-clock.png);
     background-repeat: no-repeat;
     background-position: right;
     background-size: 800px auto;
-    background-blend-mode:darken;
+    background-attachment: fixed;
+    background-blend-mode:luminosity;
     text-align: center;
     padding: 0 10px;
     >h1 {
-        margin-bottom: 5px;
-        font-size: 2rem;
-        color: white;
-        text-shadow: 0 0 3px rgba(255, 255, 255, 0.729);
-
+        // margin-bottom: 5px;
+        // font-size: 2rem;
+        color: black;
+        // height: 40px;
+        // margin: 10px 20px 0 0;
+        padding: 15px 40px;
+        align-items: center;
+        font-family: $primaryFont;
+        background-color: $third;
+        border-radius: 20px;
     }
 
     >p {
-        font-size: 20px;
-        color: white;
-        text-shadow: 0 0 3px rgba(255, 255, 255, 0.729);
+        color: black;
+        margin-top: -5px;
         margin-bottom: 30px;
+        padding: 15px;
+        align-items: center;
+        font-family: $primaryFont;
+        background-color: $third;
+        border-radius: 0 0 20px 20px;
+
     }
 
-    .shop {
-        background-color: $common;
-        font-weight: bold;
-    }
+    
 
 
 }
@@ -36,15 +44,13 @@
 
 @include bigScreen(desktop) {
     .hero{
-        background-color: $primary;
-        height: 100vh;
+        background-color: $third;
         background-image: url(../Images/vintage-alarm-clock.png);
         background-repeat: no-repeat;
         // background-position: fixed ;
         background-position: center top;
         background-size: 1500px auto;
         text-align: center;
-        background-blend-mode:darken;
         >h1 {
            
             font-size: 2rem;

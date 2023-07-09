@@ -1,35 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap");
-*::-webkit-scrollbar {
-  width: 10px;
-  width: 10px;
-}
-
-*::-webkit-scrollbar-track {
-  border-radius: 5px;
-  background-color: red;
-}
-
-*::-webkit-scrollbar-track:hover {
-  background-color: red;
-}
-
-*::-webkit-scrollbar-track:active {
-  background-color: red;
-}
-
-*::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-  background-color: white;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background-color: white;
-}
-
-*::-webkit-scrollbar-thumb:active {
-  background-color: white;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 html {
   height: 100%;
   font-size: 100%;
@@ -44,39 +15,44 @@ html {
 }
 
 body {
+  height: 100%;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-size: 0.875rem;
+  font-family: "Abril Fatface", cursive;
 }
 
-button {
-  all: unset;
-  cursor: pointer;
-  font-family: "Source Code Pro", monospace;
-  text-align: center;
-  color: white;
-  height: 45px;
-  width: 90px;
-  border-radius: 7px;
-  background-color: #F2BE22;
-  transition: all 100ms ease-in;
-}
-button:hover {
-  background-color: #22A699;
+.App {
+  height: 100%;
 }
 
-h1, h2 {
+#root {
+  height: 100%;
+}
+
+.home {
+  height: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
   color: white;
-  font-family: "Source Code Pro", monospace;
+  letter-spacing: 1px;
 }
 
 h2 {
-  font-size: 2rem;
+  color: #22A699;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  font-weight: lighter;
 }
 
 p {
-  font-family: "Source Code Pro", monospace;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1px;
 }
 
 a, a:visited, a:hover {
@@ -111,16 +87,51 @@ a, a:visited, a:hover {
   flex-direction: row;
 }
 
-nav {
+.button {
+  cursor: pointer;
   height: 45px;
-  background-color: #F29727;
+  width: 90px;
+  text-align: center;
+  background-color: #faffb9;
+  font-family: "Raleway", sans-serif;
+  font-weight: bolder;
+  color: black;
+  border: 0;
+  border-radius: 7px;
+  transition: all 100ms ease-in;
+}
+.button:hover {
+  background-color: #FFDAB9;
+}
+
+.button2 {
+  cursor: pointer;
+  padding: 10px 15px;
+  text-align: center;
+  background-color: #FFDAB9;
+  font-family: "Abril Fatface", cursive;
+  font-weight: lighter;
+  color: black;
+  border: 0;
+  border-radius: 7px;
+  transition: all 100ms ease-in;
+}
+.button2:hover {
+  color: white;
+  background-color: #22A699;
+}
+
+nav {
+  position: fixed;
+  right: 0;
+  z-index: 1;
 }
 
 .mobile__menu {
+  visibility: hidden;
   position: absolute;
   left: -100%;
   width: 100%;
-  visibility: hidden;
   transition: all 150ms ease-in-out;
 }
 .mobile__menu > a {
@@ -145,7 +156,7 @@ nav {
   .bars > span {
     height: 5px;
     width: 30px;
-    background-color: white;
+    background-color: #C1A374;
     border-radius: 2px;
     transition: all 200ms ease-in-out;
   }
@@ -171,81 +182,87 @@ nav {
     transition: all 200ms ease-in-out;
   }
   .mobile__menu {
-    background-image: url(../Images/featuredBG.png);
-    background-repeat: repeat;
-    background-size: 170px;
-    background-blend-mode: color-burn;
+    position: fixed;
     visibility: visible;
-    position: absolute;
-    align-items: end;
-    height: 70%;
+    overflow-y: hidden;
+    height: 100%;
     width: 100%;
     padding: 20px 10px;
-    background-color: #F29727;
+    align-items: end;
+    background-color: #faffb9;
+    background-blend-mode: luminosity;
     gap: 25px;
   }
   .mobile__menu > a, .mobile__menu a:active, .mobile__menu a:focus {
     visibility: visible;
-    text-decoration: underline;
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.729);
-    font-family: "Source Code Pro", monospace;
+    font-family: "Abril Fatface", cursive;
     font-weight: bold;
-    font-size: 2rem;
-    color: white;
+    font-size: 2.5rem;
+    color: #C1A374;
   }
 }
 @media (min-width: 481px) {
   .desktop__links {
-    height: inherit;
-    justify-content: end;
+    height: 40px;
+    margin: 10px 20px 0 0;
+    padding: 20px;
     align-items: center;
-    margin-right: 20px;
+    font-family: "Abril Fatface", cursive;
+    background-color: #faffb9;
+    border: 2px solid #C1A374;
+    border-radius: 20px;
     gap: 20px;
   }
-  .desktop__links > a, .desktop__links a:active, .desktop__links a:focus, .desktop__links a:hover {
-    color: white;
-    font-family: "Source Code Pro", monospace;
-    font-weight: bold;
+  .desktop__links a {
+    padding: 4px 16px;
+    margin: 5px;
+    color: black;
+    border-radius: 20px;
+    transition: all 150ms ease-in-out;
+  }
+  .desktop__links a:hover {
+    transform: scale(1.1);
   }
 }
 .hero {
-  background-color: #22A699;
-  height: 100vh;
+  background-color: #faffb9;
+  height: 100%;
   background-image: url(../Images/vintage-alarm-clock.png);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 800px auto;
-  background-blend-mode: darken;
+  background-attachment: fixed;
+  background-blend-mode: luminosity;
   text-align: center;
   padding: 0 10px;
 }
 .hero > h1 {
-  margin-bottom: 5px;
-  font-size: 2rem;
-  color: white;
-  text-shadow: 0 0 3px rgba(255, 255, 255, 0.729);
+  color: black;
+  padding: 15px 40px;
+  align-items: center;
+  font-family: "Abril Fatface", cursive;
+  background-color: #faffb9;
+  border-radius: 20px;
 }
 .hero > p {
-  font-size: 20px;
-  color: white;
-  text-shadow: 0 0 3px rgba(255, 255, 255, 0.729);
+  color: black;
+  margin-top: -5px;
   margin-bottom: 30px;
-}
-.hero .shop {
-  background-color: #F29727;
-  font-weight: bold;
+  padding: 15px;
+  align-items: center;
+  font-family: "Abril Fatface", cursive;
+  background-color: #faffb9;
+  border-radius: 0 0 20px 20px;
 }
 
 @media (min-width: 481px) {
   .hero {
-    background-color: #22A699;
-    height: 100vh;
+    background-color: #faffb9;
     background-image: url(../Images/vintage-alarm-clock.png);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 1500px auto;
     text-align: center;
-    background-blend-mode: darken;
   }
   .hero > h1 {
     font-size: 2rem;
@@ -255,25 +272,20 @@ nav {
     background-color: rgba(0, 0, 0, 0.098);
   }
   .hero .shop:hover {
-    color: #F29727;
+    color: #C1A374;
     transform: scale(0.9);
     background-color: white;
   }
   .hero .shop:hover a {
-    color: #F29727;
+    color: #C1A374;
   }
 }
 .products {
-  background-color: #F2BE22;
+  background-color: #faffb9;
   height: -moz-fit-content;
   height: fit-content;
   padding: 20px 0px;
   text-align: center;
-  background-image: url(../Images/Persistence_of_Memory.jpg);
-  background-repeat: no-repeat;
-  background-position: left 10% bottom 50%;
-  background-size: 600px auto;
-  background-blend-mode: luminosity;
 }
 .products > h2 {
   padding: 0 0 20px 0;
@@ -285,8 +297,8 @@ nav {
   gap: 20px;
 }
 .products .each-product {
-  color: white;
-  font-family: "Source Code Pro", monospace;
+  color: #C1A374;
+  font-family: "Raleway", sans-serif;
   font-weight: bolder;
   gap: 10px;
   justify-content: end;
@@ -295,59 +307,30 @@ nav {
 .products .each-product img {
   border-radius: 12px 12px 0 0;
   width: 155px;
-  filter: drop-shadow(10px 0px 0 white) drop-shadow(0px 0px 0 white);
+  filter: drop-shadow(10px 0px 50px #C1A374) drop-shadow(0px 0px 0 white);
 }
-.products .each-product > span {
-  padding: 10px 0;
-  font-family: "Source Code Pro", monospace;
-  font-weight: bolder;
-  color: white;
-  border: 2px solid white;
-  background-color: rgba(0, 0, 0, 0.134);
-  width: 115px;
+.products .each-product p {
+  font-family: "Abril Fatface", cursive;
+  font-weight: lighter;
 }
 
 @media (min-width: 481px) {
   .products {
-    background-color: #F2BE22;
-    padding: 20px 0;
-    height: -moz-fit-content;
-    height: fit-content;
+    padding: 20px;
+    height: 120%;
     text-align: center;
-    background-image: url(../Images/Persistence_of_Memory.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: left 10% bottom 50%;
-    background-size: 600px auto;
-    background-blend-mode: multiply;
-    display: flex;
     justify-content: right;
   }
   .products .products-container {
     height: -moz-fit-content;
     height: fit-content;
-    width: 60%;
+    width: 100%;
     float: right;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto auto;
     gap: 20px;
     padding: 0 20px;
-  }
-  .products .each-product img {
-    border: 0px groove #22A699;
-    border-radius: 12px 12px 0 0;
-    width: 66%;
-    background-color: transparent;
-    filter: drop-shadow(10px 0px 0 white) drop-shadow(0px 0px 0 white);
-  }
-  .products .each-product > span {
-    cursor: pointer;
-    transition: all 150ms ease-in-out;
-  }
-  .products .each-product > span:hover {
-    background-color: white;
-    color: #F2BE22;
   }
 }
 .about-us {
@@ -356,7 +339,7 @@ nav {
   background-size: 700px;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
-  background-color: #F29727;
+  background-color: #22A699;
   height: -moz-fit-content;
   height: fit-content;
   font-weight: bold;
@@ -366,10 +349,10 @@ nav {
   text-align: start;
   line-height: 1.5;
 }
-.about-us > h2 {
+.about-us h2 {
   padding: 10px 10px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
 }
 .about-us .aboutUs-container {
   background-color: rgba(255, 255, 255, 0.2);
@@ -390,18 +373,19 @@ nav {
   border: 0;
   padding: 5px;
   border-radius: 7px;
+  margin-bottom: 10px;
 }
 .about-us .newsletter .sub-btn {
   all: unset;
   font-size: 0.875rem;
-  font-family: "Source Code Pro", monospace;
+  font-family: "Abril Fatface", cursive;
   margin-top: 8px;
   padding: 0 18px;
   width: -moz-fit-content;
   width: fit-content;
   height: 40px;
   color: white;
-  background-color: #F24C3D;
+  background-color: #BCCEB4;
   border-radius: 7px;
 }
 
@@ -422,7 +406,7 @@ nav {
   }
   .aboutUs-container .newsletter .sub-btn {
     cursor: pointer;
-    background-color: #F24C3D;
+    background-color: #BCCEB4;
     transition: all 150ms ease-in-out;
   }
   .aboutUs-container .newsletter .sub-btn:hover {
@@ -434,14 +418,12 @@ nav {
   background-color: #22A699;
   height: -moz-fit-content;
   height: fit-content;
-  background-image: url(../Images/dali.png);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: 800px auto;
-  background-blend-mode: soft-light;
   text-align: center;
   align-items: center;
   gap: 10px;
+}
+.testimonials h2 {
+  color: white;
 }
 .testimonials .testimonials-container {
   height: inherit;
@@ -469,7 +451,7 @@ nav {
   padding: 20px;
   font-weight: 400;
   background-color: white;
-  font-family: "Source Code Pro", monospace;
+  font-family: "Abril Fatface", cursive;
   color: #22A699;
   width: 80%;
   border-radius: 15px;
@@ -493,49 +475,34 @@ nav {
 .featured {
   height: -moz-fit-content;
   height: fit-content;
-  padding: 40px 30px;
-  background-color: #F29727;
-  background-image: url(../Images/featuredBG.png);
+  padding: 20px;
+  background-color: #FFDAB9;
   background-attachment: fixed;
   background-repeat: repeat;
-  background-size: 100px;
+  background-size: 30px;
   background-position: center;
   background-blend-mode: darken;
+  gap: 50px;
 }
 .featured > img {
   width: 60%;
 }
 .featured .featured-info {
-  font-family: "Source Code Pro", monospace;
-  color: white;
+  padding: 15px 10px;
+  font-family: "Raleway", sans-serif;
+  color: #C1A374;
+  background-color: #faffb9;
+  box-shadow: 0px 5px 0px 0px #22A699;
+  border-radius: 15px;
   gap: 20px;
-  font-weight: bold;
-  text-shadow: 0 0 3px rgba(255, 255, 255, 0.729);
-}
-.featured .featured-info .featured-watch {
-  background-color: #F24C3D;
-  font-family: "Source Code Pro", monospace;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-family: "Source Code Pro", monospace;
-  text-align: center;
-  color: white;
-  height: 45px;
-  border-radius: 7px;
-  background-color: #F2BE22;
-  transition: all 100ms ease-in;
-}
-.featured .featured-info .featured-watch:hover {
-  transform: scale(0.9);
 }
 
-@media (max-width: 481px) {
-  .featured-info .featured-watch {
-    height: 30px;
-    text-align: center;
-    font-size: 1rem;
-    width: 90%;
-    padding: 10px;
+@media (min-width: 481px) {
+  .featured {
+    height: 1005;
+  }
+  .featured > img {
+    width: 40%;
   }
 }
 .contact {
@@ -545,11 +512,7 @@ nav {
   background-color: #22A699;
   text-align: center;
   color: white;
-  font-family: "Source Code Pro", monospace;
-  background-image: url(../Images/contactBG.webp);
-  background-blend-mode: soft-light;
-  background-repeat: no-repeat;
-  background-size: 800px;
+  font-family: "Abril Fatface", cursive;
 }
 .contact form {
   opacity: 90%;
@@ -571,7 +534,7 @@ nav {
   padding: 5px 8px;
 }
 .contact form .submit {
-  background-color: #F24C3D;
+  background-color: #BCCEB4;
   transition: all 150ms ease-in-out;
 }
 .contact form .submit:hover {
@@ -588,7 +551,7 @@ nav {
 #copyright {
   color: white;
   text-align: center;
-  font-family: "Source Code Pro", monospace;
+  font-family: "Abril Fatface", cursive;
   background-color: #22A699;
 }
 
@@ -611,7 +574,7 @@ nav {
 .maximilian {
   height: 100vh;
   background-image: url(../Images/featuredBG.png);
-  background-color: #F2BE22;
+  background-color: #FFDAB9;
   background-size: 150px;
   overflow-x: hidden;
 }
@@ -629,14 +592,14 @@ nav {
 }
 .maximilian .maximilian-info h2 {
   font-size: 1.4rem;
-  color: #F24C3D;
+  color: #BCCEB4;
 }
 
 @media (min-width: 481px) {
   .maximilian {
     height: 100vh;
     background-image: url(../Images/featuredBG.png);
-    background-color: #F2BE22;
+    background-color: #FFDAB9;
     background-size: 150px;
     overflow-x: hidden;
     flex-direction: row;
@@ -657,7 +620,7 @@ nav {
   }
   .maximilian .maximilian-info h2 {
     font-size: 1.4rem;
-    color: #F24C3D;
+    color: #BCCEB4;
   }
 }
 .quantity-selection {
@@ -673,7 +636,7 @@ nav {
   margin: 0 10px;
 }
 .quantity-selection button:hover {
-  background-color: #F2BE22;
+  background-color: #FFDAB9;
 }
 
 .atc {
@@ -681,7 +644,7 @@ nav {
   width: inherit;
 }
 .atc:hover {
-  background-color: #F2BE22;
+  background-color: #FFDAB9;
 }
 
 .cart-icon {

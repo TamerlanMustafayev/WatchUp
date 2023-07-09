@@ -18,21 +18,12 @@ window.onload=function(){
     }
     
   })
-
-
-
 }
 
 
 
 function Header() {
-
-
-
-
   return (
-    
-    
     <>
       
         
@@ -56,8 +47,8 @@ function Header() {
         </div>
         
      
-      {/* Mobile Menu  */}
     </nav>
+      {/* Mobile Menu  */}
     <div className="mobile__menu  flex flex-fd-c flex-jc-c flex-ai-c">
       
         <a href="#shop">SHOP</a>

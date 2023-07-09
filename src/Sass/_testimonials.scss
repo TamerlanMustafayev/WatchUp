@@ -2,15 +2,12 @@
     padding: 20px 10px;
     background-color: $primary;
     height: fit-content;
-    background-image: url(../Images/dali.png);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 800px auto;
-    background-blend-mode:soft-light;
     text-align: center;
     align-items: center;
     gap: 10px;
-
+    h2 {
+        color: white;
+    }
     .testimonials-container {
         height: inherit;
         margin-top: 40px;
